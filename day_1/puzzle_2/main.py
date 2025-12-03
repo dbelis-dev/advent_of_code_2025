@@ -35,14 +35,14 @@ def rotate_dial(dial, direction, distance):
     return dial[distance:] + dial[:distance]
 
 
-def calculate_password(dial):
+def calculate_password(dial, instructions, arr_size):
     """
     Applies the list of instructions to the dial and counts how many times
     any click causes the dial to point at 0 after a rotation.
     """
     rotated_dial = rotate_dial(dial, 'R', 50)
     counter = 0
-    for instr in file_instructions:
+    for instr in instructions:
         bfr = rotated_dial[0]
         rotated_dial = rotate_dial(rotated_dial, instr[0], instr[1])
         aft = rotated_dial[0]
@@ -73,5 +73,5 @@ if __name__ == "__main__":
     file_instructions = parse_input_file('day_1/input.txt')
     dial = list(range(arr_size))
     # Calculate and print the password
-    counter = calculate_password(dial)
+    counter = calculate_password(dial, file_instructions, arr_size)
     print(f"Password to open the door: {counter}")
