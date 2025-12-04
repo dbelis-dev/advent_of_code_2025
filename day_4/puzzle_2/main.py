@@ -7,14 +7,6 @@ def read_file_to_2d_array(filename):
     Returns:
         list[list[str]]: 2D array representation of the file's contents.
     """
-    # ...
-    
-    # ...
-    
-    # ...
-    
-    # ...
-# Main execution block: reads input, iteratively processes the grid, and prints the total count.
     with open(filename, 'r') as f:
         return [list(line.rstrip('\n')) for line in f]
 
