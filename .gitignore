@@ -1,5 +1,5 @@
 .vscode/settings.json
 __pycache__
-**/input.txt
+**/input*.txt
 **/.DS_Store
 .DS_Store
