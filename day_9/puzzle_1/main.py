@@ -52,7 +52,7 @@ if __name__ == "__main__":
     
     # Calculate the area between every unique pair of tiles
     areas = calculate_areas_between_tiles(tiles)
-    
+
     # Sort the list of areas by the area value (ascending order)
     sorted_areas = sorted(areas, key=lambda x: x[1])
     
